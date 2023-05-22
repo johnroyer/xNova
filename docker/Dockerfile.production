@@ -1,0 +1,4 @@
+FROM php:5.5-apache
+
+# PHP extension installation helper
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
