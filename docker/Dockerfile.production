@@ -8,6 +8,7 @@ RUN chmod +x /bin/install-php-extensions
 RUN bash install-php-extensions bcmath gd mysqli json
 
 COPY . /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 RUN a2enmod headers && a2enmod rewrite
 COPY docker/php.ini-production /usr/local/etc/php/php.ini
 COPY docker/entrypoint.sh /
