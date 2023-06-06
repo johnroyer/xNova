@@ -12,5 +12,6 @@ COPY docker/php.ini-production /usr/local/etc/php/php.ini
 COPY docker/entrypoint.sh /
 
 
-WORKDIR /var/html/www
-ENTRYPOINT [ "entrypoint.sh" ]
+WORKDIR /var/www/html
+EXPOSE 80
+ENTRYPOINT [ "/entrypoint.sh" ]
