@@ -10,3 +10,7 @@ RUN bash install-php-extensions bcmath gd mysqli json
 COPY ../ /var/www/html
 COPY php.ini-production /usr/local/etc/php/php.ini
 COPY entrypoint.sh /
+
+
+WORKDIR /var/html/www
+ENTRYPOINT [ "entrypoint.sh" ]
