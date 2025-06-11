@@ -1,23 +1,5 @@
 <?php
 
-/**
- _  \_/ |\ | /¯¯\ \  / /\    |¯¯) |_¯ \  / /¯¯\ |  |   |´¯|¯` | /¯¯\ |\ |5
- ¯  /¯\ | \| \__/  \/ /--\   |¯¯\ |__  \/  \__/ |__ \_/   |   | \__/ | \|Core.
- * @author: Copyright (C) 2011 by Brayan Narvaez (Prinick) developer of xNova Revolution
- * @author web: http://www.bnarvaez.com
- * @link: http://www.xnovarev.com
-
- * @package 2Moons
- * @author Slaver <slaver7@gmail.com>
- * @copyright 2009 Lucky <douglas@crockford.com> (XGProyecto)
- * @copyright 2011 Slaver <slaver7@gmail.com> (Fork/2Moons)
- * @license http://www.gnu.org/licenses/gpl.html GNU GPLv3 License
- * @version 1.3 (2011-01-21)
- * @link http://code.google.com/p/2moons/
-
- * Please do not remove the credits
-*/
-
 if (!allowedTo(str_replace(array(dirname(__FILE__), '\\', '/', '.php'), '', __FILE__))) {
     exit;
 }
@@ -195,7 +177,7 @@ function ShowUpdatePage()
             }
 
             update_config(array('VERSION' => $Patchlevel[0] . "." . $Patchlevel[1] . "." . $LastRev), true);
-            // Header für Download senden
+            // Header fï¿½r Download senden
             $File   = $zipfile->file();
             header("Content-length: " . strlen($File));
             header("Content-Type: application/force-download");
@@ -325,7 +307,7 @@ function ShowUpdatePage()
                 $LastRev = $Rev;
             }
             $LOG['finish']['atrev'] = $LNG['up_update_ok_rev'] . " " . $LastRev;
-            // Verbindung schließen
+            // Verbindung schlieï¿½en
             ClearCache();
             update_config(array('VERSION' => $Patchlevel[0] . "." . $Patchlevel[1] . "." . $LastRev), true);
             exitupdate($LOG);

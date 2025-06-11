@@ -1,14 +1,4 @@
 @charset "utf-8";
-/**
- _  \_/ |\ | /¯¯\ \  / /\    |¯¯) |_¯ \  / /¯¯\ |  |   |´¯|¯` | /¯¯\ |\ |5
- ¯  /¯\ | \| \__/  \/ /--\   |¯¯\ |__  \/  \__/ |__ \_/   |   | \__/ | \|Core Redesigned Skin.
- * @author: Copyright (C) 2011 by Brayan Narvaez (Prinick) developer of xNova Revolution
- * @author web: http://www.bnarvaez.com
- * @link: http://xnovarevforum.com.ar/
- * @version: 2.0
- * This skin is stable on all pc browsers and all display resolutions
- * Please do not remove the credits
-*/
 
 *{padding: 0; margin: 0;}
  
@@ -40,7 +30,7 @@ color: #f2d999;
 background:url(imagenes/navegacion/bg_boxes.png) repeat; 
 border: #2a2a2a solid 3px;
 }
-´textarea:hover {
+ï¿½textarea:hover {
 padding: 2px 2px 2px 2px;
 font-size: 13px;
 color: #f2e7cc; 
