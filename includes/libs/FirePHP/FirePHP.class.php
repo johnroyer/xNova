@@ -1309,7 +1309,7 @@ class FirePHP
             // but exist in the object
             foreach ($members as $raw_name => $value) {
                 $name = $raw_name;
-                if ($name{0} == "\0") {
+                if ($name[0] == "\0") {
                     $parts = explode("\0", $name);
                     $name = $parts[2];
                 }

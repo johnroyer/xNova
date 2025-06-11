@@ -1108,7 +1108,7 @@ class BBCode extends StringParser
             $ol = strlen($output);
             switch ($node->getFlag('newlinemode.begin', 'integer', BBCODE_NEWLINE_PARSE)) {
                 case BBCODE_NEWLINE_IGNORE:
-                    if ($ol && $output{0} == "\n") {
+                    if ($ol && $output[0] == "\n") {
                         $before = "\n";
                     }
                     // don't break!
