@@ -26,7 +26,7 @@ function bcadd($Num1, $Num2, $Scale = 0)
     $Num2   = str_pad($Num2, $MLen, '0');
 
     for ($i = 0; $i < $MLen; $i++) {
-        $Sum = ((int) $Num1{$i} + (int) $Num2{$i});
+        $Sum = ((int) $Num1[$i] + (int) $Num2[$i]);
         if (isset($Output[$i])) {
             $Sum += $Output[$i];
         }

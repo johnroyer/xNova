@@ -756,45 +756,45 @@ class FTP
     {
         $oct = 0;
         // Owner
-        if ($cm{1}      == 'r') {
+        if ($cm[1]      == 'r') {
             $oct += 0400;
         }
-        if ($cm{2}      == 'w') {
+        if ($cm[2]      == 'w') {
             $oct += 0200;
         }
-        if ($cm{3}      == 'x') {
+        if ($cm[3]      == 'x') {
             $oct += 0100;
-        } elseif ($cm{3} == 's') {
+        } elseif ($cm[3] == 's') {
             $oct += 04100;
-        } elseif ($cm{3} == 'S') {
+        } elseif ($cm[3] == 'S') {
             $oct += 04000;
         }
         // Group
-        if ($cm{4}      == 'r') {
+        if ($cm[4]      == 'r') {
             $oct += 040;
         }
-        if ($cm{5}      == 'w') {
+        if ($cm[5]      == 'w') {
             $oct += 020;
         }
-        if ($cm{6}      == 'x') {
+        if ($cm[6]      == 'x') {
             $oct += 010;
-        } elseif ($cm{6} == 's') {
+        } elseif ($cm[6] == 's') {
             $oct += 02010;
-        } elseif ($cm{6} == 'S') {
+        } elseif ($cm[6] == 'S') {
             $oct += 02000;
         }
         // Other
-        if ($cm{7}      == 'r') {
+        if ($cm[7]      == 'r') {
             $oct += 04;
         }
-        if ($cm{8}      == 'w') {
+        if ($cm[8]      == 'w') {
             $oct += 02;
         }
-        if ($cm{9}      == 'x') {
+        if ($cm[9]      == 'x') {
             $oct += 01;
-        } elseif ($cm{9} == 't') {
+        } elseif ($cm[9] == 't') {
             $oct += 01001;
-        } elseif ($cm{9} == 'T') {
+        } elseif ($cm[9] == 'T') {
             $oct += 01000;
         }
 

@@ -478,7 +478,7 @@ class StringParser
         // if yes, how should this be achieved? Another member of
         // StringParser_Node?
         $this->_setStatus(0);
-        $res = $this->_appendText($this->_text{$topelem->occurredAt});
+        $res = $this->_appendText($this->_text[$topelem->occurredAt]);
         if (!$res) {
             return false;
         }
