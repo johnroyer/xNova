@@ -151,14 +151,6 @@ switch ($Mode) {
             'reg_json_need'         => $LNG['reg_json_need'],
             'reg_iniset_need'       => $LNG['reg_iniset_need'],
             'reg_bcmath_need'       => $LNG['reg_bcmath_need'],
-            'req_ftp'               => $LNG['req_ftp'],
-            'req_ftp_info'          => $LNG['req_ftp_info'],
-            'req_ftp_host'          => $LNG['req_ftp_host'],
-            'req_ftp_username'      => $LNG['req_ftp_username'],
-            'req_ftp_password'      => $LNG['req_ftp_password'],
-            'req_ftp_dir'           => $LNG['req_ftp_dir'],
-            'req_ftp_send'          => $LNG['req_ftp_send'],
-            'req_ftp_pass_info'     => $LNG['req_ftp_pass_info'],
         ));
         $template->show('install/ins_req.tpl');
         break;

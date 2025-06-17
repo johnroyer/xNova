@@ -28,14 +28,6 @@ $LNG['reg_iniset_need']		= 'ini_set() disponibile?';
 $LNG['reg_global_need']		= 'register_globals disattivato?';
 $LNG['reg_json_need']		= 'JSON disponibile?';
 $LNG['req_php_need']		= 'PHP-Version (min. 5.2.5)';
-$LNG['req_ftp']				= 'FTP';
-$LNG['req_ftp_info']		= 'Inserisci i dettagli del tuo FTP.';
-$LNG['req_ftp_host']		= 'FTP Host';
-$LNG['req_ftp_username']	= 'Username';
-$LNG['req_ftp_password']	= 'Password';
-$LNG['req_ftp_dir']			= '2Moons Path';
-$LNG['req_ftp_send']		= 'Esegui';
-$LNG['req_ftp_pass_info']	= 'Inserisci i dettagli per la password.';
 
 $LNG['step1_mysql_server']	= 'MySQL-DB-Server: <br>Standard: localhost';
 $LNG['step1_mysql_port']	= 'MySQL-DB-Server-Porta: <br>Standard: 3306';

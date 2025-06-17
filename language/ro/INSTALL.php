@@ -24,14 +24,6 @@ $LNG['reg_bcmath_need']		= "BCMath disponibil?";
 $LNG['reg_iniset_need']		= "ini_set() disponibil?";
 $LNG['reg_json_need']		= "JSON disponibil?";
 $LNG['req_php_need']		= "PHP-Version (min. 5.2.5)";
-$LNG['req_ftp']				= "FTP";
-$LNG['req_ftp_info']		= "Introdu datele FTP.";
-$LNG['req_ftp_host']		= "FTP Host";
-$LNG['req_ftp_username']	= "Utilizator";
-$LNG['req_ftp_password']	= "Parolă";
-$LNG['req_ftp_dir']			= "Calea 2Moons";
-$LNG['req_ftp_send']		= "Trimite";
-$LNG['req_ftp_pass_info']	= "Detealiile parolei.";
 
 $LNG['step1_mysql_server']	= "MySQL-DB-Server: <br>Standard: localhost";
 $LNG['step1_mysql_port']	= "MySQL-DB-Server-Port: <br>Standard: 3306";
