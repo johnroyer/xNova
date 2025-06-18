@@ -3,8 +3,6 @@ services:
     build:
       context: ../
       dockerfile: ./docker/Dockerfile.dev
-      additional_contexts:
-        app: docker-image://xnova:dev
     volumes:
       - ./:/var/www/html
     ports:
