@@ -56,7 +56,6 @@ switch ($Mode) {
         break;
     case 'req':
         $error = false;
-        $ftp = false;
         if (version_compare(PHP_VERSION, "5.2.5", ">=")) {
             $PHP = "<span class=\"yes\">" . $LNG['reg_yes'] . ", v" . PHP_VERSION . "</span>";
         } else {
@@ -151,14 +150,6 @@ switch ($Mode) {
             'reg_json_need'         => $LNG['reg_json_need'],
             'reg_iniset_need'       => $LNG['reg_iniset_need'],
             'reg_bcmath_need'       => $LNG['reg_bcmath_need'],
-            'req_ftp'               => $LNG['req_ftp'],
-            'req_ftp_info'          => $LNG['req_ftp_info'],
-            'req_ftp_host'          => $LNG['req_ftp_host'],
-            'req_ftp_username'      => $LNG['req_ftp_username'],
-            'req_ftp_password'      => $LNG['req_ftp_password'],
-            'req_ftp_dir'           => $LNG['req_ftp_dir'],
-            'req_ftp_send'          => $LNG['req_ftp_send'],
-            'req_ftp_pass_info'     => $LNG['req_ftp_pass_info'],
         ));
         $template->show('install/ins_req.tpl');
         break;
@@ -166,26 +157,14 @@ switch ($Mode) {
         $action = request_var('action', '');
         switch ($action) {
             case 'ftp':
-                require_once(ROOT_PATH . 'includes/libs/ftp/ftp.class.php');
-                require_once(ROOT_PATH . 'includes/libs/ftp/ftpexception.class.php');
                 $LANG->includeLang(array('ADMIN'));
                 $CONFIG = array("host" => $_GET['host'], "username" => $_GET['user'], "password" => $_GET['pass'], "port" => 21);
-                try {
-                    $ftp = FTP::getInstance();
-                    $ftp->connect($CONFIG);
-                } catch (FTPException $error) {
-                    exit($LNG['up_ftp_error']);
-                }
-
-                if (!$ftp->changeDir($_GET['path'])) {
-                    exit($LNG['up_ftp_change_error']);
-                }
 
                 $CHMOD  = (php_sapi_name() == 'apache2handler') ? 0666 : 0755;
-                $ftp->chmod('cache', $CHMOD);
-                $ftp->chmod('cache/sessions', $CHMOD);
-                $ftp->chmod('raports', $CHMOD);
-                $ftp->chmod('includes', $CHMOD);
+                chmod('cache', $CHMOD);
+                chmod('cache/sessions', $CHMOD);
+                chmod('raports', $CHMOD);
+                chmod('includes', $CHMOD);
                 exit;
             break;
             case 'install':
@@ -253,7 +232,8 @@ switch ($Mode) {
                 $md5pass    = md5($adm_pass);
 
                 if (empty($_POST['adm_user']) && empty($_POST['adm_pas']) && empty($_POST['adm_email'])) {
-                    exit($template->message($LNG['step4_need_fields'], "?mode=ins&page=3&lang=" . $LANG->GetUser(), 3, true));
+                    $template->message($LNG['step4_need_fields'], "?mode=ins&page=3&lang=" . $LANG->GetUser(), 3, true);
+                    exit();
                 }
 
                 require_once(ROOT_PATH . 'includes/config.php');

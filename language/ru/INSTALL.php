@@ -25,14 +25,6 @@ $LNG['reg_json_need']      = "JSON доступен?";
 $LNG['reg_bcmath_need']    = "BCMath доступен?";
 $LNG['reg_iniset_need']    = "ini_set разрешён?";
 $LNG['req_php_need']       = "PHP-версия (мин. 5.2.5)";
-$LNG['req_ftp']            = "FTP";
-$LNG['req_ftp_info']       = "Введите свои FTP данные для решения проблем с CHMOD";
-$LNG['req_ftp_host']       = "FTP хост";
-$LNG['req_ftp_username']   = "FTP логин";
-$LNG['req_ftp_password']   = "FTP пароль";
-$LNG['req_ftp_dir']        = "FTP путь к 2Moons";
-$LNG['req_ftp_send']       = "Установить права CHMOD 777";
-$LNG['req_ftp_pass_info']  = "Ваш пароль не будет сохранён!";
 
 $LNG['step1_mysql_server'] = "Хост: <br>По умолчанию: localhost";
 $LNG['step1_mysql_port']   = "Порт хоста: <br>По умолчанию: 3306";

@@ -27,14 +27,6 @@ $LNG['reg_iniset_need']		= 'ini_set() na voljo?';
 $LNG['reg_json_need']		= "JSON na voljo?";
 $LNG['req_php_need']		= "PHP-Verzija (min. 5.2.5)";
 $LNG['req_smode_active']	= "Varni način aktiven?";
-$LNG['req_ftp']				= "FTP";
-$LNG['req_ftp_info']		= "Vnesite vaše FTP podatke.";
-$LNG['req_ftp_host']		= 'FTP gostitelj';
-$LNG['req_ftp_username']	= 'Uporabniško ime';
-$LNG['req_ftp_password']	= 'Geslo';
-$LNG['req_ftp_dir']			= 'Pot do 2Moons';
-$LNG['req_ftp_send']		= 'Potrdi';
-$LNG['req_ftp_pass_info']	= 'Vnesite podrobnosti gesla.';
 
 $LNG['step1_notice_chmod']	= "Obvezno nastavite config.php na \"CHMOD 777\", da je zapisljiv!";
 $LNG['step1_mysql_server']	= "MySQL-DB-Strežnik: <br>Privzeto: localhost";

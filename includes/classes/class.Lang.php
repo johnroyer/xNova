@@ -14,7 +14,7 @@ class Language
         'si' => 'Slovenščina',
     );
 
-    public $Default   = '';
+    public $Default   = 'en';
     public $User   = '';
 
     function __construct()

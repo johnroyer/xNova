@@ -25,14 +25,6 @@ $LNG['reg_iniset_need']		= "ini_set() disponible:";
 $LNG['reg_mysqli_active']       = "MySQLi disponible:";
 $LNG['reg_json_need']		= "JSON disponible:";
 $LNG['req_php_need']		= "PHP-Version (min. 5.2.5)";
-$LNG['req_ftp']				= "FTP";
-$LNG['req_ftp_info']		= "Escribe los detalles de tu FTP.";
-$LNG['req_ftp_host']		= "FTP Host";
-$LNG['req_ftp_username']	= "Usuario";
-$LNG['req_ftp_password']	= "Contrase&ntilde;a";
-$LNG['req_ftp_dir']			= "XNOVA Path";
-$LNG['req_ftp_send']		= "Enviar";
-$LNG['req_ftp_pass_info']	= "Detalles de la contrase&ntilde;a.";
 
 $LNG['step1_mysql_server']	= "MySQL-DB-Server: <br>Estandar: localhost";
 $LNG['step1_mysql_port']	= "MySQL-DB-Server-Port: <br>Estandar: 3306";
@@ -43,10 +35,10 @@ $LNG['step1_mysql_prefix']	= "MySQL-DB-Prefix: <br> Ej.: uni1_";
 
 $LNG['step2_db_error']		= "Error al crear la tabla de base de datos(s): %s";
 $LNG['step2_db_con_fail']	= "No hay conexi&oacute;n con la base de datos.<br> %s";
-$LNG['step2_conf_op_fail']	= "El fichero config.php no está en modo CHMOD 777.";
-$LNG['step2_db_connet_ok']	= "Conexión establecida satisfactoriamente con la Base de datos...";
-$LNG['step2_db_create_ok']	= "Tablas creadas con éxito...";
-$LNG['step2_conf_create']	= "Fichero config.php creadas éxito...";
+$LNG['step2_conf_op_fail']	= "El fichero config.php no estï¿½ en modo CHMOD 777.";
+$LNG['step2_db_connet_ok']	= "Conexiï¿½n establecida satisfactoriamente con la Base de datos...";
+$LNG['step2_db_create_ok']	= "Tablas creadas con ï¿½xito...";
+$LNG['step2_conf_create']	= "Fichero config.php creadas ï¿½xito...";
 
 $LNG['step3_create_admin']	= "Creaci&oacute;n de cuenta de administrador";
 $LNG['step3_admin_name']	= "Administrador Usuario:";

@@ -27,14 +27,6 @@ $LNG['reg_iniset_need']		= "ini_set() available?";
 $LNG['reg_json_need']		= "JSON available?";
 $LNG['req_php_need']		= "PHP-Version (min. 5.2.5)";
 $LNG['req_smode_active']	= "Safemode active?";
-$LNG['req_ftp']				= "FTP";
-$LNG['req_ftp_info']		= "Enter your FTP Details.";
-$LNG['req_ftp_host']		= "FTP Host";
-$LNG['req_ftp_username']	= "Username";
-$LNG['req_ftp_password']	= "Password";
-$LNG['req_ftp_dir']			= "xNova Revolution Path";
-$LNG['req_ftp_send']		= "Submit";
-$LNG['req_ftp_pass_info']	= "Enter Password Details.";
 
 $LNG['step1_notice_chmod']	= "Make sure the config.php is set to \"CHMOD 777\", so it is writable!";
 $LNG['step1_mysql_server']	= "MySQL-DB-Server: <br>Standard: localhost";
