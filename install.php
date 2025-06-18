@@ -56,7 +56,6 @@ switch ($Mode) {
         break;
     case 'req':
         $error = false;
-        $ftp = false;
         if (version_compare(PHP_VERSION, "5.2.5", ">=")) {
             $PHP = "<span class=\"yes\">" . $LNG['reg_yes'] . ", v" . PHP_VERSION . "</span>";
         } else {
