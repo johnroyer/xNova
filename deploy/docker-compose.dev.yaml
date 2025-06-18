@@ -16,6 +16,8 @@ services:
     image: mariadb:lts
     volumes:
       - ./data/mariadb:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
     networks:
       - internal
 
