@@ -4,7 +4,7 @@ services:
       context: ../
       dockerfile: ./docker/Dockerfile.dev
     volumes:
-      - ./:/var/www/html
+      - ../:/var/www/html
     ports:
       - 127.0.0.1:8080:80
     networks:
