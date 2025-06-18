@@ -232,7 +232,8 @@ switch ($Mode) {
                 $md5pass    = md5($adm_pass);
 
                 if (empty($_POST['adm_user']) && empty($_POST['adm_pas']) && empty($_POST['adm_email'])) {
-                    exit($template->message($LNG['step4_need_fields'], "?mode=ins&page=3&lang=" . $LANG->GetUser(), 3, true));
+                    $template->message($LNG['step4_need_fields'], "?mode=ins&page=3&lang=" . $LANG->GetUser(), 3, true);
+                    exit();
                 }
 
                 require_once(ROOT_PATH . 'includes/config.php');
