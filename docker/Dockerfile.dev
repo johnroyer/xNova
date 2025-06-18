@@ -1,0 +1,17 @@
+FROM php:5.5-apache
+
+# PHP extension installation helper
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /bin/
+RUN chmod +x /bin/install-php-extensions
+
+# install PHP extensions
+RUN bash install-php-extensions bcmath gd mysqli json xdebug
+
+RUN echo "Hello World" > /var/www/html/index.html && \
+    a2enmod headers && a2enmod rewrite
+COPY docker/php.ini-production /usr/local/etc/php/php.ini
+
+
+WORKDIR /var/www/html
+EXPOSE 80
+# ENTRYPOINT [ "/entrypoint.sh" ]
