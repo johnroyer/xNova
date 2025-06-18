@@ -157,26 +157,14 @@ switch ($Mode) {
         $action = request_var('action', '');
         switch ($action) {
             case 'ftp':
-                require_once(ROOT_PATH . 'includes/libs/ftp/ftp.class.php');
-                require_once(ROOT_PATH . 'includes/libs/ftp/ftpexception.class.php');
                 $LANG->includeLang(array('ADMIN'));
                 $CONFIG = array("host" => $_GET['host'], "username" => $_GET['user'], "password" => $_GET['pass'], "port" => 21);
-                try {
-                    $ftp = FTP::getInstance();
-                    $ftp->connect($CONFIG);
-                } catch (FTPException $error) {
-                    exit($LNG['up_ftp_error']);
-                }
-
-                if (!$ftp->changeDir($_GET['path'])) {
-                    exit($LNG['up_ftp_change_error']);
-                }
 
                 $CHMOD  = (php_sapi_name() == 'apache2handler') ? 0666 : 0755;
-                $ftp->chmod('cache', $CHMOD);
-                $ftp->chmod('cache/sessions', $CHMOD);
-                $ftp->chmod('raports', $CHMOD);
-                $ftp->chmod('includes', $CHMOD);
+                chmod('cache', $CHMOD);
+                chmod('cache/sessions', $CHMOD);
+                chmod('raports', $CHMOD);
+                chmod('includes', $CHMOD);
                 exit;
             break;
             case 'install':
