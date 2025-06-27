@@ -150,6 +150,7 @@ switch ($Mode) {
             'reg_json_need'         => $LNG['reg_json_need'],
             'reg_iniset_need'       => $LNG['reg_iniset_need'],
             'reg_bcmath_need'       => $LNG['reg_bcmath_need'],
+            'req_ftp_send'          => $LNG['continue']
         ));
         $template->show('install/ins_req.tpl');
         break;
