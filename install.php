@@ -158,9 +158,7 @@ switch ($Mode) {
         $action = request_var('action', '');
         switch ($action) {
             case 'ftp':
-//                $CONFIG = array("host" => $_GET['host'], "username" => $_GET['user'], "password" => $_GET['pass'], "port" => 21);
-
-            break;
+                break;
             case 'install':
                 break;
         }
