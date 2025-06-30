@@ -158,17 +158,24 @@ switch ($Mode) {
         $action = request_var('action', '');
         switch ($action) {
             case 'ftp':
-                $LANG->includeLang(array('ADMIN'));
-                $CONFIG = array("host" => $_GET['host'], "username" => $_GET['user'], "password" => $_GET['pass'], "port" => 21);
+//                $CONFIG = array("host" => $_GET['host'], "username" => $_GET['user'], "password" => $_GET['pass'], "port" => 21);
 
+            break;
+            case 'install':
+                break;
+        }
+        break;
+    case 'ins':
+        switch ($Page) {
+            case 1:
+                $LANG->includeLang(array('ADMIN'));
                 $CHMOD  = (php_sapi_name() == 'apache2handler') ? 0666 : 0755;
                 chmod('cache', $CHMOD);
                 chmod('cache/sessions', $CHMOD);
                 chmod('raports', $CHMOD);
                 chmod('includes', $CHMOD);
-                exit;
-            break;
-            case 'install':
+
+
                 $database['host']           = request_var('host', '');
                 $database['port']           = request_var('port', 0);
                 $database['user']           = request_var('user', '', true);
@@ -198,12 +205,8 @@ switch ($Mode) {
                 file_put_contents(ROOT_PATH . "includes/config.php", sprintf(file_get_contents(ROOT_PATH . "includes/config.sample.php"), $database['host'], $database['port'], $database['user'], $database['userpw'], $database['databasename'], $prefix, mt_rand(1000, 9999999999)));
 
                 exit(json_encode(array('msg' => implode("\r\n", array($LNG['step2_db_connet_ok'], $LNG['step2_db_create_ok'], $LNG['step2_conf_create'])), 'error' => false)));
-            break;
-        }
-        break;
-    case 'ins':
-        switch ($Page) {
-            case 1:
+
+
                 $template->assign_vars(array(
                     'step1_notice_chmod'    => $LNG['step1_notice_chmod'],
                     'step1_mysql_server'    => $LNG['step1_mysql_server'],
